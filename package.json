@@ -23,8 +23,8 @@
     "size": "dist/index.mjs"
   },
   "scripts": {
-    "dev": "dev",
-    "build": "build",
+    "build": "tsup --watch",
+    "dev": "tsup",
     "lint": "eslint src",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks"
