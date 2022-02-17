@@ -1,12 +1,12 @@
 {
-  "name": "@beequeue/project-template",
+  "name": "@beequeue/size-cli",
   "version": "0.0.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@6.24.0",
+  "packageManager": "pnpm@6.30.1",
   "engines": {
-    "node": ">=16"
+    "node": ">=14"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -16,6 +16,12 @@
       "prettier --write"
     ]
   },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "size": "dist/index.mjs"
+  },
   "scripts": {
     "dev": "dev",
     "build": "build",
@@ -23,14 +29,22 @@
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks"
   },
+  "dependencies": {
+    "bytes": "3.1.2",
+    "fast-glob": "3.2.11",
+    "minimist": "1.2.5"
+  },
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.4.0",
     "@tsconfig/node16": "1.0.2",
-    "dotenv": "10.0.0",
-    "eslint": "8.4.1",
-    "lint-staged": "12.1.2",
+    "@types/bytes": "3.1.1",
+    "@types/minimist": "1.2.2",
+    "@types/node": "16.11.7",
+    "eslint": "8.9.0",
+    "lint-staged": "12.3.4",
     "prettier": "2.5.1",
     "simple-git-hooks": "2.7.0",
-    "typescript": "4.5.4"
+    "tsup": "5.11.13",
+    "typescript": "4.5.5"
   }
 }
