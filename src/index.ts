@@ -18,20 +18,20 @@ const { _, brotli } = minimist(process.argv.slice(2), {
 
 void (async () => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-  const filePaths = await glob(_, { onlyFiles: true, absolute: true, unique: true })
+  const filePaths = await glob(_, { onlyFiles: true, unique: true })
 
   const entries = await Promise.all(
     filePaths.map(async (filePath) => {
-      const contents = await fs.readFile(filePath, "utf-8")
+      const contents = await fs.readFile(filePath)
       const compressed = await (brotli
         ? compress.brotli(contents)
         : compress.gzip(contents, { level: 9 }))
 
-      return [filePath, [compressed.byteLength, compressed.length]] as const
+      return [filePath, [contents.length, compressed.byteLength]] as const
     }),
   )
 
   for (const [filePath, sizes] of entries) {
-    console.log(`${filePath}: ${format(sizes[0])}, ${format(sizes[1])}`)
+    console.log(`${filePath}: ${format(sizes[0])} / ${format(sizes[1])}`)
   }
 })()
