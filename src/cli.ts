@@ -27,6 +27,17 @@ void (async () => {
         return
       }
 
+      const totals = entries.reduce(
+        (accum, { original, compressed, difference }) => {
+          accum.original += original
+          accum.compressed += compressed
+          accum.difference += difference
+
+          return accum
+        },
+        { original: 0, compressed: 0, difference: 0 },
+      )
+
       printRows([
         ["Path", "Size", brotli ? "Brotli" : "Gzip", "Diff%"],
         ...entries.map(({ filePath, original, compressed, difference }) => [
@@ -35,6 +46,13 @@ void (async () => {
           format(compressed),
           `${((difference / original) * 100).toFixed(0)}%`,
         ]),
+        ["-----", "------", "------"],
+        [
+          "Total",
+          format(totals.original),
+          format(totals.compressed),
+          `${((totals.difference / totals.original) * 100).toFixed(0)}%`,
+        ],
       ])
     })
     .showSuggestionAfterError()
