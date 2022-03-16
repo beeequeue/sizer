@@ -32,12 +32,12 @@
     ]
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && pnpm pkg package.json",
     "dev": "tsup --watch",
     "lint": "eslint src",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks",
-    "release": "pnpm build && pnpm pkg package.json && pnpm changeset publish"
+    "release": "pnpm build && pnpm changeset publish"
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.5.0",

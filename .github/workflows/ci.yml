@@ -74,6 +74,13 @@ jobs:
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
 
+      - uses: actions/cache@v2
+        with:
+          path: ~/.pkg-cache
+          key: v1-${{ runner.os }}-pkg-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-${{ runner.os }}-pkg-
+
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
