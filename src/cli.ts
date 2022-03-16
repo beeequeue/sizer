@@ -7,6 +7,7 @@ import { printRows, sortingFunctions } from "./utils"
 
 export type Options = {
   sort: "name-asc" | "name-desc" | "size-asc" | "size-desc"
+  ignore?: string
   brotli?: boolean
   json?: boolean
 }
@@ -21,10 +22,15 @@ void (async () => {
         .choices(["size-asc", "size-desc", "name-asc", "name-desc"])
         .default("size-desc"),
     )
+    .option("-i, --ignore <glob>", "Glob of files to exclude from output")
     .option("-B, --brotli", "Compress using Brotli (slow!)")
     .option("--json", "Output in JSON format")
-    .action(async (fileGlob: string, { sort, brotli, json }: Options) => {
-      const filePaths = await glob(fileGlob, { onlyFiles: true, unique: true })
+    .action(async (fileGlob: string, { sort, ignore, brotli, json }: Options) => {
+      const filePaths = await glob(fileGlob, {
+        onlyFiles: true,
+        unique: true,
+        ignore: ignore ? [ignore] : undefined,
+      })
 
       let entries = await getCompressedFileSizes(filePaths, brotli)
 

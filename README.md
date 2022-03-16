@@ -16,15 +16,16 @@ Or (not recommended) download one of the binaries in [the Releases tab](https://
 Usage: sizer [options] <glob>
 
 Arguments:
-  glob               File path glob to analyze
+  glob                 File path glob to analyze
 
 Options:
-  -V, --version      output the version number
-  -s, --sort <type>  Change how files are sorted in the output
-                       (choices: "size-asc", "size-desc", "name-asc", "name-desc", default: "size-desc")
-  -B, --brotli       Compress using Brotli (slow!)
-  --json             Output in JSON format
-  -h, --help         display help for command
+  -V, --version        output the version number
+  -s, --sort <type>    Change how files are sorted in the output
+                         (choices: "size-asc", "size-desc", "name-asc", "name-desc", default: "size-desc")
+  -i, --ignore <glob>  Glob of files to exclude from output
+  -B, --brotli         Compress using Brotli (slow!)
+  --json               Output in JSON format
+  -h, --help           display help for command
 ```
 
 <details>
