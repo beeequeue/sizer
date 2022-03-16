@@ -47,7 +47,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
       - name: Upload binaries to release
-        if: ${{ steps.changesets.outputs.published == true }}
+        if: ${{ steps.changesets.outputs.published == 'true' }}
         run: gh release upload --clobber $(git tag) dist-pkg/*
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
