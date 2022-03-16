@@ -3,6 +3,7 @@ import { program } from "commander"
 import glob from "fast-glob"
 
 import { getCompressedFileSizes } from "./compress"
+import { printRows } from "./utils"
 
 type Options = {
   brotli?: boolean
@@ -19,9 +20,13 @@ void (async () => {
 
       const entries = await getCompressedFileSizes(filePaths, brotli)
 
-      for (const [filePath, sizes] of entries) {
-        console.log(`${filePath}: ${format(sizes[0])} / ${format(sizes[1])}`)
-      }
+      printRows(
+        entries.map(([filePath, sizes]) => [
+          filePath,
+          format(sizes[0]),
+          format(sizes[1]),
+        ]),
+      )
     })
     .showSuggestionAfterError()
     .exitOverride()
