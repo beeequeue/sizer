@@ -1,10 +1,10 @@
 {
-  "name": "@beequeue/size-cli",
+  "name": "@beequeue/sizer",
   "version": "0.0.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@6.30.1",
+  "packageManager": "pnpm@6.32.3",
   "engines": {
     "node": ">=14"
   },
@@ -20,31 +20,28 @@
     "dist"
   ],
   "bin": {
-    "size": "dist/index.mjs"
+    "sizer": "dist/cli.js"
   },
   "scripts": {
-    "build": "tsup --watch",
-    "dev": "tsup",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "eslint src",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks"
   },
-  "dependencies": {
-    "bytes": "3.1.2",
-    "fast-glob": "3.2.11",
-    "minimist": "1.2.5"
-  },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "0.4.0",
+    "@beequeue/eslint-plugin": "0.5.0",
     "@tsconfig/node16": "1.0.2",
     "@types/bytes": "3.1.1",
-    "@types/minimist": "1.2.2",
-    "@types/node": "16.11.7",
-    "eslint": "8.9.0",
-    "lint-staged": "12.3.4",
-    "prettier": "2.5.1",
+    "@types/node": "16.11.26",
+    "bytes": "3.1.2",
+    "commander": "9.0.0",
+    "eslint": "8.11.0",
+    "fast-glob": "3.2.11",
+    "lint-staged": "12.3.6",
+    "prettier": "2.6.0",
     "simple-git-hooks": "2.7.0",
-    "tsup": "5.11.13",
-    "typescript": "4.5.5"
+    "tsup": "5.12.1",
+    "typescript": "4.7.0-dev.20220316"
   }
 }

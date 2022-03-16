@@ -1,13 +1,17 @@
 import { defineConfig } from "tsup"
+import pkgJson from "./package.json"
 
 export default defineConfig({
-  entryPoints: ["src/index.ts"],
+  entryPoints: ["src/cli.ts"],
+
+  define: {
+    PKG_VERSION: JSON.stringify(pkgJson.version),
+  },
 
   platform: "node",
   target: "node14",
-  format: ["cjs", "esm"],
-  dts: true,
+  format: ["cjs"],
   clean: true,
-  minify: false,
+  minify: true,
   sourcemap: true,
 })
