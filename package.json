@@ -1,6 +1,6 @@
 {
   "name": "@beequeue/sizer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "packageManager": "pnpm@6.32.3",
