@@ -3,7 +3,7 @@ on:
     branches:
       - main
     paths:
-      - .changesets/**/*
+      - .changeset/**/*
 
 name: Changesets
 
