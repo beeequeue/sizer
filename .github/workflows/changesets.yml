@@ -5,10 +5,10 @@ on:
     paths:
       - .changeset/**/*
 
-name: Changesets
+name: CD
 
 jobs:
-  release:
+  changesets:
     runs-on: ubuntu-latest
 
     steps:
