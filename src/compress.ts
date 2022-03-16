@@ -15,7 +15,12 @@ export const getCompressedFileSizes = async (filePaths: string[], brotli?: boole
         ? compress.brotli(contents)
         : compress.gzip(contents, { level: 9 }))
 
-      return [filePath, [contents.length, compressed.byteLength]] as const
+      return {
+        filePath,
+        original: contents.length,
+        compressed: compressed.byteLength,
+        difference: compressed.byteLength - contents.length,
+      } as const
     }),
   )
 }
