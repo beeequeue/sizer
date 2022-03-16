@@ -19,7 +19,7 @@ export const printRows = <Tuple extends ReadonlyArray<string>>(rows: Array<Tuple
     .reduce(
       (accum, row) =>
         `${accum}\n${row
-          .map((column, i) => column.padEnd(maxColWidths[i] + 1, " "))
+          .map((column, i) => column.padEnd(maxColWidths[i] + 2, " "))
           .join("")}`,
       "",
     )
