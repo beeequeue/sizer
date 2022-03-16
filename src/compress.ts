@@ -7,6 +7,13 @@ const compress = {
   brotli: promisify(brotliCompress),
 }
 
+export type Result = {
+  filePath: string
+  original: number
+  compressed: number
+  difference: number
+}
+
 export const getCompressedFileSizes = async (filePaths: string[], brotli?: boolean) => {
   return await Promise.all(
     filePaths.map(async (filePath) => {
@@ -20,7 +27,7 @@ export const getCompressedFileSizes = async (filePaths: string[], brotli?: boole
         original: contents.length,
         compressed: compressed.byteLength,
         difference: compressed.byteLength - contents.length,
-      } as const
+      } as Result
     }),
   )
 }

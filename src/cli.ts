@@ -1,11 +1,12 @@
 import { format } from "bytes"
-import { program } from "commander"
+import { Option, program } from "commander"
 import glob from "fast-glob"
 
 import { getCompressedFileSizes } from "./compress"
-import { printRows } from "./utils"
+import { printRows, sortingFunctions } from "./utils"
 
-type Options = {
+export type Options = {
+  sort: "name-asc" | "name-desc" | "size-asc" | "size-desc"
   brotli?: boolean
   json?: boolean
 }
@@ -15,12 +16,19 @@ void (async () => {
     .name("sizer")
     .version(`sizer v${PKG_VERSION}`)
     .argument("<glob>", "File path glob to analyze")
+    .addOption(
+      new Option("-s, --sort <type>", "Change how files are sorted in the output")
+        .choices(["size-asc", "size-desc", "name-asc", "name-desc"])
+        .default("size-desc"),
+    )
     .option("-B, --brotli", "Compress using Brotli (slow!)")
     .option("--json", "Output in JSON format")
-    .action(async (fileGlob: string, { brotli, json }: Options) => {
+    .action(async (fileGlob: string, { sort, brotli, json }: Options) => {
       const filePaths = await glob(fileGlob, { onlyFiles: true, unique: true })
 
-      const entries = await getCompressedFileSizes(filePaths, brotli)
+      let entries = await getCompressedFileSizes(filePaths, brotli)
+
+      entries = entries.sort(sortingFunctions[sort])
 
       if (json) {
         console.log(JSON.stringify(entries, null, 2))
