@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "private": true,
   "packageManager": "pnpm@6.32.3",
   "engines": {
     "node": ">=14"
