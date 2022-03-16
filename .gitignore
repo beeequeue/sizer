@@ -9,7 +9,7 @@ node_modules
 .DS_Store
 .idea
 dist
-dist-ssr
+dist-pkg
 .env
 
 .vercel

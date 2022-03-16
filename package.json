@@ -22,6 +22,15 @@
   "bin": {
     "sizer": "dist/cli.js"
   },
+  "pkg": {
+    "outputPath": "dist-pkg",
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node14-win-x64",
+      "node14-linux-x64",
+      "node14-macos-x64"
+    ]
+  },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -39,6 +48,7 @@
     "eslint": "8.11.0",
     "fast-glob": "3.2.11",
     "lint-staged": "12.3.6",
+    "pkg": "5.5.2",
     "prettier": "2.6.0",
     "simple-git-hooks": "2.7.0",
     "tsup": "5.12.1",
