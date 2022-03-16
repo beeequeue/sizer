@@ -20,8 +20,8 @@ Arguments:
 
 Options:
   -V, --version      output the version number
-  -s, --sort <type>  Change how files are sorted in the output (choices: "size-asc", "size-desc", "name-asc",
-                     "name-desc", default: "size-desc")
+  -s, --sort <type>  Change how files are sorted in the output
+                       (choices: "size-asc", "size-desc", "name-asc", "name-desc", default: "size-desc")
   -B, --brotli       Compress using Brotli (slow!)
   --json             Output in JSON format
   -h, --help         display help for command
