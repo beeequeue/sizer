@@ -4,6 +4,7 @@ on:
       - main
     paths:
       - .changeset/**/*
+  workflow_dispatch:
 
 name: CD
 
@@ -36,7 +37,7 @@ jobs:
 
       - name: Update release PR / Publish packages to `npm`
         id: changesets
-        uses: changesets/action@master
+        uses: changesets/action@v1
         with:
           title: Release
           commit: Release new version
