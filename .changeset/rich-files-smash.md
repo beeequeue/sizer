@@ -2,4 +2,4 @@
 "@beequeue/sizer": minor
 ---
 
-Initial release!
+Initial release!!
