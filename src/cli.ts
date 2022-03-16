@@ -40,13 +40,14 @@ void (async () => {
 
       printRows([
         ["Path", "Size", brotli ? "Brotli" : "Gzip", "Diff%"],
+        ["----", "----", "----", "-----"],
         ...entries.map(({ filePath, original, compressed, difference }) => [
           filePath,
           format(original),
           format(compressed),
           `${((difference / original) * 100).toFixed(0)}%`,
         ]),
-        ["-----", "------", "------"],
+        ["-----", "------", "------", "----"],
         [
           "Total",
           format(totals.original),
