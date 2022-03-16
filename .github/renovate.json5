@@ -1,0 +1,21 @@
+{
+  extends: ["config:js-app", "helpers:disableTypesNodeMajor"],
+  prHourlyLimit: 5,
+  prConcurrentLimit: 5,
+  branchConcurrentLimit: 5,
+  schedule: ["before 11am"],
+  labels: ["dependencies"],
+  postUpdateOptions: ["yarnDedupeHighest"],
+  baseBranches: ["main"],
+  packageRules: [
+    {
+      matchUpdateTypes: ["patch", "minor"],
+      matchManagers: ["npm"],
+      automerge: true,
+    },
+    {
+      packagePatterns: ["lint"],
+      groupName: "Linting",
+    },
+  ],
+}
