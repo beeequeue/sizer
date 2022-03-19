@@ -8,7 +8,7 @@ specifiers:
   '@types/bytes': 3.1.1
   '@types/node': 16.11.26
   bytes: 3.1.2
-  commander: 9.0.0
+  commander: 9.1.0
   eslint: 8.11.0
   fast-glob: 3.2.11
   lint-staged: 12.3.7
@@ -26,7 +26,7 @@ devDependencies:
   '@types/bytes': 3.1.1
   '@types/node': 16.11.26
   bytes: 3.1.2
-  commander: 9.0.0
+  commander: 9.1.0
   eslint: 8.11.0
   fast-glob: 3.2.11
   lint-staged: 12.3.7
@@ -996,8 +996,8 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
-  /commander/9.0.0:
-    resolution: {integrity: sha512-JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==}
+  /commander/9.1.0:
+    resolution: {integrity: sha512-i0/MaqBtdbnJ4XQs4Pmyb+oFQl+q0lsAmokVUH92SlSw4fkeAcG3bVon+Qt7hmtF+u3Het6o4VgrcY3qAoEB6w==}
     engines: {node: ^12.20.0 || >=14}
     dev: true
 
