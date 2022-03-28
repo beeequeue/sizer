@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@beequeue/eslint-plugin': 0.5.0
-  '@changesets/changelog-github': 0.4.3
+  '@changesets/changelog-github': 0.4.4
   '@changesets/cli': 2.21.1
   '@tsconfig/node16': 1.0.2
   '@types/bytes': 3.1.1
@@ -20,7 +20,7 @@ specifiers:
 
 devDependencies:
   '@beequeue/eslint-plugin': 0.5.0_ab7912bf90ebb9d51eeb29590d9dff8a
-  '@changesets/changelog-github': 0.4.3
+  '@changesets/changelog-github': 0.4.4
   '@changesets/cli': 2.21.1
   '@tsconfig/node16': 1.0.2
   '@types/bytes': 3.1.1
@@ -151,11 +151,11 @@ packages:
       '@changesets/types': 4.1.0
     dev: true
 
-  /@changesets/changelog-github/0.4.3:
-    resolution: {integrity: sha512-93X4arork7DV4+tVYeNlOTrw7HOXIvvd41yRPY9atJ+nS32W0uS+ewkZdc6WThuqmwGx9xaU+pxHtVLeYJTF0A==}
+  /@changesets/changelog-github/0.4.4:
+    resolution: {integrity: sha512-htSILqCkyYtTB5/LoVKwx7GCJQGxAiBcYbfUKWiz/QoDARuM01owYtMXhV6/iytJZq/Dqqz3PjMZUNB4MphpbQ==}
     dependencies:
       '@changesets/get-github-info': 0.5.0
-      '@changesets/types': 4.1.0
+      '@changesets/types': 5.0.0
       dotenv: 8.6.0
     transitivePeerDependencies:
       - encoding
@@ -300,6 +300,10 @@ packages:
 
   /@changesets/types/4.1.0:
     resolution: {integrity: sha512-LDQvVDv5Kb50ny2s25Fhm3d9QSZimsoUGBsUioj6MC3qbMUCuC8GPIvk/M6IvXx3lYhAs0lwWUQLb+VIEUCECw==}
+    dev: true
+
+  /@changesets/types/5.0.0:
+    resolution: {integrity: sha512-IT1kBLSbAgTS4WtpU6P5ko054hq12vk4tgeIFRVE7Vnm4a/wgbNvBalgiKP0MjEXbCkZbItiGQHkCGxYWR55sA==}
     dev: true
 
   /@changesets/write/0.1.7:
