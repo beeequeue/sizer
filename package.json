@@ -54,6 +54,6 @@
     "prettier": "2.6.1",
     "simple-git-hooks": "2.7.0",
     "tsup": "5.12.2",
-    "typescript": "4.7.0-dev.20220331"
+    "typescript": "4.7.0-dev.20220401"
   }
 }
