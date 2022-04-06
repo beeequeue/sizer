@@ -12,7 +12,7 @@ specifiers:
   eslint: 8.12.0
   fast-glob: 3.2.11
   lint-staged: 12.3.7
-  pkg: 5.5.2
+  pkg: 5.6.0
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
   tsup: 5.12.4
@@ -30,7 +30,7 @@ devDependencies:
   eslint: 8.12.0
   fast-glob: 3.2.11
   lint-staged: 12.3.7
-  pkg: 5.5.2
+  pkg: 5.6.0
   prettier: 2.6.2
   simple-git-hooks: 2.7.0
   tsup: 5.12.4_typescript@4.7.0-dev.20220405
@@ -3056,8 +3056,8 @@ packages:
       find-up: 4.1.0
     dev: true
 
-  /pkg-fetch/3.2.6:
-    resolution: {integrity: sha512-Q8fx6SIT022g0cdSE4Axv/xpfHeltspo2gg1KsWRinLQZOTRRAtOOaEFghA1F3jJ8FVsh8hGrL/Pb6Ea5XHIFw==}
+  /pkg-fetch/3.3.0:
+    resolution: {integrity: sha512-xJnIZ1KP+8rNN+VLafwu4tEeV4m8IkFBDdCFqmAJz9K1aiXEtbARmdbEe6HlXWGSVuShSHjFXpfkKRkDBQ5kiA==}
     hasBin: true
     dependencies:
       chalk: 4.1.2
@@ -3073,8 +3073,8 @@ packages:
       - supports-color
     dev: true
 
-  /pkg/5.5.2:
-    resolution: {integrity: sha512-pD0UB2ud01C6pVv2wpGsTYJrXI/bnvGRYvMLd44wFzA1p+A2jrlTGFPAYa7YEYzmitXhx23PqalaG1eUEnSwcA==}
+  /pkg/5.6.0:
+    resolution: {integrity: sha512-mHrAVSQWmHA41RnUmRpC7pK9lNnMfdA16CF3cqOI22a8LZxOQzF7M8YWtA2nfs+d7I0MTDXOtkDsAsFXeCpYjg==}
     hasBin: true
     peerDependencies:
       node-notifier: '>=9.0.1'
@@ -3091,7 +3091,7 @@ packages:
       into-stream: 6.0.0
       minimist: 1.2.5
       multistream: 4.1.0
-      pkg-fetch: 3.2.6
+      pkg-fetch: 3.3.0
       prebuild-install: 6.1.4
       progress: 2.0.3
       resolve: 1.22.0
