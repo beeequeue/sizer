@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "packageManager": "pnpm@6.32.8",
+  "packageManager": "pnpm@6.32.9",
   "engines": {
     "node": ">=14"
   },
