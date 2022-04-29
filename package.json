@@ -44,7 +44,7 @@
     "@changesets/cli": "2.22.0",
     "@tsconfig/node16": "1.0.2",
     "@types/bytes": "3.1.1",
-    "@types/node": "16.11.31",
+    "@types/node": "16.11.32",
     "bytes": "3.1.2",
     "commander": "9.2.0",
     "eslint": "8.14.0",
