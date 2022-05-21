@@ -47,7 +47,7 @@
     "@types/node": "16.11.36",
     "bytes": "3.1.2",
     "commander": "9.2.0",
-    "eslint": "8.15.0",
+    "eslint": "8.16.0",
     "fast-glob": "3.2.11",
     "lint-staged": "12.4.1",
     "pkg": "5.7.0",
