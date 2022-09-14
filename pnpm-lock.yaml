@@ -6,7 +6,7 @@ specifiers:
   '@changesets/cli': 2.24.4
   '@tsconfig/node16': 1.0.3
   '@types/bytes': 3.1.1
-  '@types/node': 16.11.58
+  '@types/node': 16.11.59
   bytes: 3.1.2
   commander: 9.4.0
   eslint: 8.23.1
@@ -24,7 +24,7 @@ devDependencies:
   '@changesets/cli': 2.24.4
   '@tsconfig/node16': 1.0.3
   '@types/bytes': 3.1.1
-  '@types/node': 16.11.58
+  '@types/node': 16.11.59
   bytes: 3.1.2
   commander: 9.4.0
   eslint: 8.23.1
@@ -493,8 +493,8 @@ packages:
     resolution: {integrity: sha512-BzcaRsnFuznzOItW1WpQrDHM7plAa7GIDMZ6b5pnMbkqEtM/6WCOhvZar39oeMQP79gwvFUWjjptE7/KGcNqFg==}
     dev: true
 
-  /@types/node/16.11.58:
-    resolution: {integrity: sha512-uMVxJ111wpHzkx/vshZFb6Qni3BOMnlWLq7q9jrwej7Yw/KvjsEbpxCCxw+hLKxexFMc8YmpG8J9tnEe/rKsIg==}
+  /@types/node/16.11.59:
+    resolution: {integrity: sha512-6u+36Dj3aDzhfBVUf/mfmc92OEdzQ2kx2jcXGdigfl70E/neV21ZHE6UCz4MDzTRcVqGAM27fk+DLXvyDsn3Jw==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
