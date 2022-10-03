@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "packageManager": "pnpm@7.12.2",
+  "packageManager": "pnpm@7.13.0",
   "engines": {
     "node": ">=14"
   },
@@ -44,7 +44,7 @@
     "@changesets/cli": "2.25.0",
     "@tsconfig/node16": "1.0.3",
     "@types/bytes": "3.1.1",
-    "@types/node": "16.11.62",
+    "@types/node": "16.11.63",
     "bytes": "3.1.2",
     "commander": "9.4.1",
     "eslint": "8.24.0",
