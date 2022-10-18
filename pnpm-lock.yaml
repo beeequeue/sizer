@@ -14,8 +14,8 @@ specifiers:
   lint-staged: 13.0.3
   pkg: 5.8.0
   prettier: 2.7.1
-  simple-git-hooks: 2.8.0
-  tsup: 6.2.3
+  simple-git-hooks: 2.8.1
+  tsup: 6.3.0
   typescript: 4.8.4
 
 devDependencies:
@@ -32,8 +32,8 @@ devDependencies:
   lint-staged: 13.0.3
   pkg: 5.8.0
   prettier: 2.7.1
-  simple-git-hooks: 2.8.0
-  tsup: 6.2.3_typescript@4.8.4
+  simple-git-hooks: 2.8.1
+  tsup: 6.3.0_typescript@4.8.4
   typescript: 4.8.4
 
 packages:
@@ -3750,8 +3750,8 @@ packages:
       simple-concat: 1.0.1
     dev: true
 
-  /simple-git-hooks/2.8.0:
-    resolution: {integrity: sha512-ocmZQORwa6x9mxg+gVIAp5o4wXiWOHGXyrDBA0+UxGKIEKOyFtL4LWNKkP/2ornQPdlnlDGDteVeYP5FjhIoWA==}
+  /simple-git-hooks/2.8.1:
+    resolution: {integrity: sha512-DYpcVR1AGtSfFUNzlBdHrQGPsOhuuEJ/FkmPOOlFysP60AHd3nsEpkGq/QEOdtUyT1Qhk7w9oLmFoMG+75BDog==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -4141,8 +4141,8 @@ packages:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
     dev: true
 
-  /tsup/6.2.3_typescript@4.8.4:
-    resolution: {integrity: sha512-J5Pu2Dx0E1wlpIEsVFv9ryzP1pZ1OYsJ2cBHZ7GrKteytNdzaSz5hmLX7/nAxtypq+jVkVvA79d7S83ETgHQ5w==}
+  /tsup/6.3.0_typescript@4.8.4:
+    resolution: {integrity: sha512-IaNQO/o1rFgadLhNonVKNCT2cks+vvnWX3DnL8sB87lBDqRvJXHENr5lSPJlqwplUlDxSwZK8dSg87rgBu6Emw==}
     engines: {node: '>=14'}
     hasBin: true
     peerDependencies:
