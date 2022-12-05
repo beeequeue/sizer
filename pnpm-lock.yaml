@@ -11,7 +11,7 @@ specifiers:
   commander: 9.4.1
   eslint: 8.29.0
   fast-glob: 3.2.12
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   pkg: 5.8.0
   prettier: 2.8.0
   simple-git-hooks: 2.8.1
@@ -29,7 +29,7 @@ devDependencies:
   commander: 9.4.1
   eslint: 8.29.0
   fast-glob: 3.2.12
-  lint-staged: 13.0.4
+  lint-staged: 13.1.0
   pkg: 5.8.0
   prettier: 2.8.0
   simple-git-hooks: 2.8.1
@@ -2731,8 +2731,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/13.0.4:
-    resolution: {integrity: sha512-HxlHCXoYRsq9QCby5wFozmZW00hMs/9e3l+/dz6Qr8Kle4UH0kJTdABAbqhzG+3pcG6QjL9kz7NgGBfph+a5dw==}
+  /lint-staged/13.1.0:
+    resolution: {integrity: sha512-pn/sR8IrcF/T0vpWLilih8jmVouMlxqXxKuAojmbiGX5n/gDnz+abdPptlj0vYnbfE0SQNl3CY/HwtM0+yfOVQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
