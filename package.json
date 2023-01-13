@@ -5,7 +5,7 @@
   "license": "MIT",
   "packageManager": "pnpm@7.17.0",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
