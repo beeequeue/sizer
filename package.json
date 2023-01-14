@@ -46,7 +46,7 @@
     "@types/bytes": "3.1.1",
     "@types/node": "16.18.3",
     "bytes": "3.1.2",
-    "commander": "9.4.1",
+    "commander": "10.0.0",
     "eslint": "8.31.0",
     "fast-glob": "3.2.12",
     "lint-staged": "13.1.0",
