@@ -39,7 +39,7 @@
     "release": "pnpm build && pnpm changeset publish"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "2.1.0",
+    "@beequeue/eslint-plugin": "2.1.1",
     "@changesets/changelog-github": "0.4.7",
     "@changesets/cli": "2.25.2",
     "@tsconfig/node16": "1.0.3",
@@ -47,9 +47,9 @@
     "@types/node": "16.18.3",
     "bytes": "3.1.2",
     "commander": "10.0.0",
-    "eslint": "8.39.0",
+    "eslint": "8.46.0",
     "fast-glob": "3.2.12",
-    "lint-staged": "13.2.2",
+    "lint-staged": "13.2.3",
     "pkg": "5.8.0",
     "prettier": "2.8.0",
     "simple-git-hooks": "2.8.1",
