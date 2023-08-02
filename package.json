@@ -1,11 +1,12 @@
 {
   "name": "@beequeue/sizer",
+  "type": "module",
   "version": "0.2.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "packageManager": "pnpm@7.17.0",
+  "packageManager": "pnpm@8.6.11",
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -39,21 +40,22 @@
     "release": "pnpm build && pnpm changeset publish"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "2.1.0",
-    "@changesets/changelog-github": "0.4.7",
-    "@changesets/cli": "2.25.2",
-    "@tsconfig/node16": "1.0.3",
+    "@beequeue/eslint-plugin": "3.0.1",
+    "@changesets/changelog-github": "0.4.8",
+    "@changesets/cli": "2.26.2",
+    "@tsconfig/node20": "20.1.0",
+    "@tsconfig/strictest": "2.0.1",
     "@types/bytes": "3.1.1",
-    "@types/node": "16.18.3",
+    "@types/node": "20.4.5",
     "bytes": "3.1.2",
     "commander": "10.0.0",
-    "eslint": "8.39.0",
-    "fast-glob": "3.2.12",
-    "lint-staged": "13.2.2",
-    "pkg": "5.8.0",
-    "prettier": "2.8.0",
-    "simple-git-hooks": "2.8.1",
+    "eslint": "8.46.0",
+    "fast-glob": "3.3.1",
+    "lint-staged": "13.2.3",
+    "pkg": "5.8.1",
+    "prettier": "3.0.0",
+    "simple-git-hooks": "2.9.0",
     "tsup": "7.2.0",
-    "typescript": "5.0.2"
+    "typescript": "5.1.6"
   }
 }

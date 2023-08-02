@@ -1,12 +1,13 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": ["@tsconfig/node20/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
   "compilerOptions": {
     // Output
     "noEmit": true,
     "sourceMap": true,
 
     // Modules
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": "./src",
@@ -14,15 +15,15 @@
       "~/*": ["src/*"]
     },
 
-    // Typechecking
-    "skipLibCheck": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "forceConsistentCasingInFileNames": true,
+    // Lessen strictness
+    "importsNotUsedAsValues": "remove",
+    "noImplicitReturns": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "verbatimModuleSyntax": false,
 
     // Extra types
-    "lib": ["es2020"],
     "types": ["node"]
   },
 
