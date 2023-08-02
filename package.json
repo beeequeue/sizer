@@ -26,13 +26,13 @@
     "outputPath": "dist-pkg",
     "scripts": "dist/**/*.js",
     "targets": [
-      "node14-win-x64",
-      "node14-linux-x64",
-      "node14-macos-x64"
+      "node18-win-x64",
+      "node18-linux-x64",
+      "node18-macos-x64"
     ]
   },
   "scripts": {
-    "build": "tsup && pnpm pkg package.json",
+    "build": "tsup && pnpm exec pkg package.json",
     "dev": "tsup --watch",
     "lint": "eslint src",
     "typecheck": "tsc --noEmit --project tsconfig.json",
