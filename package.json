@@ -1,7 +1,7 @@
 {
   "name": "@beequeue/sizer",
   "type": "module",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "packageManager": "pnpm@8.6.11",

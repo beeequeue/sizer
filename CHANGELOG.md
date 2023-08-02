@@ -1,5 +1,11 @@
 # @beequeue/sizer
 
+## 1.0.0
+
+### Major Changes
+
+- [`b516819`](https://github.com/BeeeQueue/sizer/commit/b5168197de232924f64d613d8d1e7cbf815cbc2a) - Now requires node >=18 if running via npm installation
+
 ## 0.2.0
 
 ### Minor Changes
