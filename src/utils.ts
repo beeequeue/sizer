@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 
-import type { Options } from "./cli"
-import type { Result } from "./compress"
+import type { Options } from "./cli.js"
+import type { Result } from "./compress.js"
 
-export const printRows = <Tuple extends ReadonlyArray<string>>(rows: Array<Tuple>) => {
+export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
   const maxColWidths = rows.reduce((accum, row) => {
     for (const [i, column] of row.entries()) {
       const width = column.length
@@ -23,7 +23,7 @@ export const printRows = <Tuple extends ReadonlyArray<string>>(rows: Array<Tuple
           .join("")}`,
       "",
     )
-    .replace(/(^\n|\n$)/g, "")
+    .replaceAll(/(^\n|\n$)/g, "")
 
   console.log(output)
 }

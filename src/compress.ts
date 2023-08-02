@@ -1,6 +1,6 @@
-import { promises as fs } from "fs"
-import { promisify } from "util"
-import { brotliCompress, gzip as gzipCompress } from "zlib"
+import { promises as fs } from "node:fs"
+import { promisify } from "node:util"
+import { brotliCompress, gzip as gzipCompress } from "node:zlib"
 
 const compress = {
   gzip: promisify(gzipCompress),

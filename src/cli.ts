@@ -2,8 +2,8 @@ import { format } from "bytes"
 import { Option, program } from "commander"
 import glob from "fast-glob"
 
-import { getCompressedFileSizes } from "./compress"
-import { printRows, sortingFunctions } from "./utils"
+import { getCompressedFileSizes } from "./compress.js"
+import { printRows, sortingFunctions } from "./utils.js"
 
 export type Options = {
   sort: "name-asc" | "name-desc" | "size-asc" | "size-desc"
