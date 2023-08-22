@@ -15,8 +15,8 @@ devDependencies:
     specifier: 2.26.2
     version: 2.26.2
   '@tsconfig/node20':
-    specifier: 20.1.1
-    version: 20.1.1
+    specifier: 20.1.2
+    version: 20.1.2
   '@tsconfig/strictest':
     specifier: 2.0.1
     version: 2.0.1
@@ -24,8 +24,8 @@ devDependencies:
     specifier: 3.1.1
     version: 3.1.1
   '@types/node':
-    specifier: 20.5.1
-    version: 20.5.1
+    specifier: 20.5.2
+    version: 20.5.2
   bytes:
     specifier: 3.1.2
     version: 3.1.2
@@ -700,8 +700,8 @@ packages:
       tslib: 2.6.1
     dev: true
 
-  /@tsconfig/node20@20.1.1:
-    resolution: {integrity: sha512-7AuWv3hETpJGJegd0bTdnHIrdT/WuR3UUScGRemxhmH0vhbTTGKFZvY8DHZOqIECNdiIy6iFLh52E6Op9YrFiA==}
+  /@tsconfig/node20@20.1.2:
+    resolution: {integrity: sha512-madaWq2k+LYMEhmcp0fs+OGaLFk0OenpHa4gmI4VEmCKX4PJntQ6fnnGADVFrVkBj0wIdAlQnK/MrlYTHsa1gQ==}
     dev: true
 
   /@tsconfig/strictest@2.0.1:
@@ -730,8 +730,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@20.5.1:
-    resolution: {integrity: sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==}
+  /@types/node@20.5.2:
+    resolution: {integrity: sha512-5j/lXt7unfPOUlrKC34HIaedONleyLtwkKggiD/0uuMfT8gg2EOpg0dz4lCD15Ga7muC+1WzJZAjIB9simWd6Q==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
