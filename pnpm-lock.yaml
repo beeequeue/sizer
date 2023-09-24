@@ -24,8 +24,8 @@ devDependencies:
     specifier: 3.1.2
     version: 3.1.2
   '@types/node':
-    specifier: 20.6.3
-    version: 20.6.3
+    specifier: 20.6.4
+    version: 20.6.4
   bytes:
     specifier: 3.1.2
     version: 3.1.2
@@ -730,8 +730,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@20.6.3:
-    resolution: {integrity: sha512-HksnYH4Ljr4VQgEy2lTStbCKv/P590tmPe5HqOnv9Gprffgv5WXAY+Y5Gqniu0GGqeTCUdBnzC3QSrzPkBkAMA==}
+  /@types/node@20.6.4:
+    resolution: {integrity: sha512-nU6d9MPY0NBUMiE/nXd2IIoC4OLvsLpwAjheoAeuzgvDZA1Cb10QYg+91AF6zQiKWRN5i1m07x6sMe0niBznoQ==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
