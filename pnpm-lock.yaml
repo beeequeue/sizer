@@ -21,8 +21,8 @@ devDependencies:
     specifier: 2.0.2
     version: 2.0.2
   '@types/bytes':
-    specifier: 3.1.2
-    version: 3.1.2
+    specifier: 3.1.3
+    version: 3.1.3
   '@types/node':
     specifier: 20.8.6
     version: 20.8.6
@@ -708,8 +708,8 @@ packages:
     resolution: {integrity: sha512-jt4jIsWKvUvuY6adJnQJlb/UR7DdjC8CjHI/OaSQruj2yX9/K6+KOvDt/vD6udqos/FUk5Op66CvYT7TBLYO5Q==}
     dev: true
 
-  /@types/bytes@3.1.2:
-    resolution: {integrity: sha512-92b6q7CSYBMVZDtMZh5PuKm3LjZwcU7s6H8e9sU20Z1tOrTuXN+Hz3VuP9E8axiQRaCoiEOMN1duqPCEIhamrQ==}
+  /@types/bytes@3.1.3:
+    resolution: {integrity: sha512-eEgZiWn6cjG8tc+AkI3FIa9ub9zhLMSRHqbecHe5yffqws+848zoHdbgFYxvUks4RElfJB9cupvqcd1gvDFQig==}
     dev: true
 
   /@types/is-ci@3.0.0:
