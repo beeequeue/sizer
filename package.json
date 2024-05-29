@@ -42,7 +42,7 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "3.0.1",
     "@changesets/changelog-github": "0.5.0",
-    "@changesets/cli": "2.27.3",
+    "@changesets/cli": "2.27.5",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.4",
