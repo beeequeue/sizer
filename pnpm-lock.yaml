@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@beequeue/eslint-plugin':
         specifier: 3.0.1
-        version: 3.0.1(eslint@8.57.0)(prettier@3.3.1)(typescript@5.4.5)
+        version: 3.0.1(eslint@8.57.0)(prettier@3.3.2)(typescript@5.4.5)
       '@changesets/changelog-github':
         specifier: 0.5.0
         version: 0.5.0
@@ -48,8 +48,8 @@ importers:
         specifier: 5.8.1
         version: 5.8.1
       prettier:
-        specifier: 3.3.1
-        version: 3.3.1
+        specifier: 3.3.2
+        version: 3.3.2
       simple-git-hooks:
         specifier: 2.11.1
         version: 2.11.1
@@ -329,6 +329,7 @@ packages:
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -336,6 +337,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.2':
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@jridgewell/gen-mapping@0.3.3':
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -1941,8 +1943,8 @@ packages:
     engines: {node: '>=10.13.0'}
     hasBin: true
 
-  prettier@3.3.1:
-    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
+  prettier@3.3.2:
+    resolution: {integrity: sha512-rAVeHYMcv8ATV5d508CFdn+8/pHPpXeIid1DdrPwXnaAdH7cqjVbpJaT5eq4yRAFU/lsbwYwSF/n5iNrdJHPQA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2584,7 +2586,7 @@ snapshots:
       '@babel/helper-validator-identifier': 7.22.5
       to-fast-properties: 2.0.0
 
-  '@beequeue/eslint-plugin@3.0.1(eslint@8.57.0)(prettier@3.3.1)(typescript@5.4.5)':
+  '@beequeue/eslint-plugin@3.0.1(eslint@8.57.0)(prettier@3.3.2)(typescript@5.4.5)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 6.1.0(@typescript-eslint/parser@6.1.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/parser': 6.1.0(eslint@8.57.0)(typescript@5.4.5)
@@ -2595,12 +2597,12 @@ snapshots:
       eslint-plugin-import: eslint-plugin-i@2.27.5-4(@typescript-eslint/parser@6.1.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.5.5)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.57.0)
       eslint-plugin-n: 16.0.1(eslint@8.57.0)
-      eslint-plugin-prettier: 5.0.0(eslint-config-prettier@8.8.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.1)
+      eslint-plugin-prettier: 5.0.0(eslint-config-prettier@8.8.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.2)
       eslint-plugin-react: 7.33.0(eslint@8.57.0)
       eslint-plugin-unicorn: 48.0.0(eslint@8.57.0)
       eslint-plugin-vue: 9.15.1(eslint@8.57.0)
     optionalDependencies:
-      prettier: 3.3.1
+      prettier: 3.3.2
     transitivePeerDependencies:
       - '@types/eslint'
       - eslint-import-resolver-node
@@ -3672,10 +3674,10 @@ snapshots:
       resolve: 1.22.3
       semver: 7.5.4
 
-  eslint-plugin-prettier@5.0.0(eslint-config-prettier@8.8.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.1):
+  eslint-plugin-prettier@5.0.0(eslint-config-prettier@8.8.0(eslint@8.57.0))(eslint@8.57.0)(prettier@3.3.2):
     dependencies:
       eslint: 8.57.0
-      prettier: 3.3.1
+      prettier: 3.3.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.5
     optionalDependencies:
@@ -4649,7 +4651,7 @@ snapshots:
 
   prettier@2.8.8: {}
 
-  prettier@3.3.1: {}
+  prettier@3.3.2: {}
 
   process-nextick-args@2.0.1: {}
 
