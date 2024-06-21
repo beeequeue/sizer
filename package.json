@@ -46,7 +46,7 @@
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.4",
-    "@types/node": "20.14.6",
+    "@types/node": "20.14.7",
     "bytes": "3.1.2",
     "commander": "11.1.0",
     "eslint": "8.57.0",
@@ -56,6 +56,6 @@
     "prettier": "3.3.2",
     "simple-git-hooks": "2.11.1",
     "tsup": "8.1.0",
-    "typescript": "5.4.5"
+    "typescript": "5.5.2"
   }
 }
