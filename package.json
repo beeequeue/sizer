@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "packageManager": "pnpm@9.14.4",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=18"
   },
@@ -41,21 +41,21 @@
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "3.0.1",
-    "@changesets/changelog-github": "0.5.0",
-    "@changesets/cli": "2.27.10",
-    "@tsconfig/node20": "20.1.4",
+    "@changesets/changelog-github": "0.5.1",
+    "@changesets/cli": "2.29.2",
+    "@tsconfig/node20": "20.1.5",
     "@tsconfig/strictest": "2.0.5",
-    "@types/bytes": "3.1.4",
-    "@types/node": "20.17.9",
+    "@types/bytes": "3.1.5",
+    "@types/node": "20.17.32",
     "bytes": "3.1.2",
     "commander": "11.1.0",
     "eslint": "8.57.1",
-    "fast-glob": "3.3.2",
+    "fast-glob": "3.3.3",
     "lint-staged": "13.3.0",
     "pkg": "5.8.1",
-    "prettier": "3.4.1",
-    "simple-git-hooks": "2.11.1",
-    "tsup": "8.3.5",
-    "typescript": "5.7.2"
+    "prettier": "3.5.3",
+    "simple-git-hooks": "2.13.0",
+    "tsup": "8.4.0",
+    "typescript": "5.8.3"
   }
 }
