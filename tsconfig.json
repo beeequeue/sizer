@@ -1,9 +1,11 @@
 {
-  "extends": ["@tsconfig/node20/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
+  "extends": ["@tsconfig/node22/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
   "compilerOptions": {
     // Output
     "noEmit": true,
     "sourceMap": true,
+    "composite": true,
+    "tsBuildInfoFile": "node_modules/.cache/typescript/.tsbuildinfo",
 
     // Modules
     "module": "nodenext",
@@ -26,6 +28,6 @@
     // Extra types
     "types": ["node"]
   },
-
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

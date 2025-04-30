@@ -29,7 +29,7 @@ void (async () => {
       const filePaths = await glob(fileGlob, {
         onlyFiles: true,
         unique: true,
-        ignore: ignore ? [ignore] : undefined,
+        ignore: ignore != null ? [ignore] : undefined,
       })
 
       let entries = await getCompressedFileSizes(filePaths, brotli)

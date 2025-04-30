@@ -40,22 +40,22 @@
     "release": "pnpm build && pnpm changeset publish"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "3.0.1",
+    "@antfu/eslint-config": "4.12.0",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.10",
-    "@tsconfig/node20": "20.1.4",
+    "@tsconfig/node22": "22.0.1",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.4",
     "@types/node": "20.17.9",
     "bytes": "3.1.2",
     "commander": "11.1.0",
-    "eslint": "8.57.1",
+    "eslint": "9.25.1",
     "fast-glob": "3.3.2",
     "nano-staged": "0.8.0",
     "pkg": "5.8.1",
     "prettier": "3.5.3",
     "simple-git-hooks": "2.13.0",
     "tsup": "8.3.5",
-    "typescript": "5.7.2"
+    "typescript": "5.8.3"
   }
 }

@@ -15,7 +15,7 @@ export type Result = {
 }
 
 export const getCompressedFileSizes = async (filePaths: string[], brotli?: boolean) => {
-  return await Promise.all(
+  return Promise.all(
     filePaths.map(async (filePath) => {
       const contents = await fs.readFile(filePath)
       const compressed = await (brotli

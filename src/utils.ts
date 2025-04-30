@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 import type { Options } from "./cli.js"
 import type { Result } from "./compress.js"
 
@@ -23,7 +21,7 @@ export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
           .join("")}`,
       "",
     )
-    .replaceAll(/(^\n|\n$)/g, "")
+    .replaceAll(/^\n|\n$/g, "")
 
   console.log(output)
 }
