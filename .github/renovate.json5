@@ -3,7 +3,7 @@
     "config:js-app",
     "helpers:disableTypesNodeMajor",
     "group:allNonMajor",
-    "schedule:monthly"
+    "schedule:monthly",
   ],
   prHourlyLimit: 5,
   prConcurrentLimit: 5,

@@ -9,9 +9,9 @@
     "node": ">=18"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "./node_modules/.bin/nano-staged"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.{js,jsx,ts,tsx,json,json5,yaml,yml,css,scss,md}": [
       "prettier --write"
     ]
@@ -51,10 +51,10 @@
     "commander": "11.1.0",
     "eslint": "8.57.1",
     "fast-glob": "3.3.2",
-    "lint-staged": "13.3.0",
+    "nano-staged": "0.8.0",
     "pkg": "5.8.1",
-    "prettier": "3.4.1",
-    "simple-git-hooks": "2.11.1",
+    "prettier": "3.5.3",
+    "simple-git-hooks": "2.13.0",
     "tsup": "8.3.5",
     "typescript": "5.7.2"
   }
