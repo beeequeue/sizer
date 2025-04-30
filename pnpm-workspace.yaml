@@ -1,0 +1,13 @@
+savePrefix: ""
+shellEmulator: true
+
+overrides:
+  "@eslint/markdown": "-"
+  "@stylistic/eslint-plugin": "-"
+  eslint-plugin-jsonc: "-"
+  eslint-plugin-toml: "-"
+  eslint-plugin-vue: "-"
+  eslint-processor-vue-blocks: "-"
+  is-core-module: "npm:@nolyfill/is-core-module@^1"
+  jsonc-eslint-parser: "-"
+  toml-eslint-parser: "-"
