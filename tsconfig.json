@@ -28,6 +28,6 @@
     // Extra types
     "types": ["node"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["./**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

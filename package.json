@@ -32,9 +32,9 @@
     ]
   },
   "scripts": {
-    "build": "tsup && pnpm exec pkg package.json",
-    "dev": "tsup --watch",
-    "lint": "eslint src",
+    "build": "tsdown && pnpm exec pkg package.json",
+    "dev": "tsdown --watch",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks",
     "release": "pnpm build && pnpm changeset publish"
@@ -55,7 +55,7 @@
     "pkg": "5.8.1",
     "prettier": "3.5.3",
     "simple-git-hooks": "2.13.0",
-    "tsup": "8.3.5",
+    "tsdown": "0.10.2",
     "typescript": "5.8.3"
   }
 }
