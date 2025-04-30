@@ -51,9 +51,6 @@ importers:
       eslint:
         specifier: 9.25.1
         version: 9.25.1(jiti@2.4.2)
-      fast-glob:
-        specifier: 3.3.2
-        version: 3.3.2
       nano-staged:
         specifier: 0.8.0
         version: 0.8.0
@@ -66,6 +63,9 @@ importers:
       simple-git-hooks:
         specifier: 2.13.0
         version: 2.13.0
+      tinyglobby:
+        specifier: 0.2.13
+        version: 0.2.13
       tsdown:
         specifier: 0.10.2
         version: 0.10.2(typescript@5.8.3)

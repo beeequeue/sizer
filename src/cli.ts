@@ -1,6 +1,6 @@
 import { format } from "bytes"
 import { Option, program } from "commander"
-import glob from "fast-glob"
+import { globSync } from "tinyglobby"
 
 import { getCompressedFileSizes } from "./compress.js"
 import { printRows, sortingFunctions } from "./utils.js"
@@ -26,9 +26,9 @@ void (async () => {
     .option("-B, --brotli", "Compress using Brotli (slow!)")
     .option("--json", "Output in JSON format")
     .action(async (fileGlob: string, { sort, ignore, brotli, json }: Options) => {
-      const filePaths = await glob(fileGlob, {
+      const filePaths = globSync(fileGlob, {
         onlyFiles: true,
-        unique: true,
+        expandDirectories: false,
         ignore: ignore != null ? [ignore] : undefined,
       })
 

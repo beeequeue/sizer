@@ -50,11 +50,11 @@
     "bytes": "3.1.2",
     "commander": "11.1.0",
     "eslint": "9.25.1",
-    "fast-glob": "3.3.2",
     "nano-staged": "0.8.0",
     "pkg": "5.8.1",
     "prettier": "3.5.3",
     "simple-git-hooks": "2.13.0",
+    "tinyglobby": "0.2.13",
     "tsdown": "0.10.2",
     "typescript": "5.8.3"
   }
