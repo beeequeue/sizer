@@ -1,5 +1,5 @@
 import { format } from "bytes"
-import { Option, program } from "commander"
+import Sade from "sade"
 import { globSync } from "tinyglobby"
 
 import { getCompressedFileSizes } from "./compress.js"
@@ -12,21 +12,23 @@ export type Options = {
   json?: boolean
 }
 
+const program = Sade("sizer <glob>", true)
+
 void (async () => {
-  const command = program
-    .name("sizer")
-    .version(`sizer v${PKG_VERSION}`)
-    .argument("<glob>", "File path glob to analyze")
-    .addOption(
-      new Option("-s, --sort <type>", "Change how files are sorted in the output")
-        .choices(["size-asc", "size-desc", "name-asc", "name-desc"])
-        .default("size-desc"),
+  program
+    .version(PKG_VERSION)
+    .describe("🔢 A tiny CLI for checking file sizes with compression")
+    .example("dist/**/*.js")
+    .option(
+      "-s, --sort",
+      "Change how files are sorted in the output. One of size-asc, size-desc, name-asc, name-desc",
+      "size-desc",
     )
-    .option("-i, --ignore <glob>", "Glob of files to exclude from output")
+    .option("-i, --ignore", "Glob of files to exclude from output")
     .option("-B, --brotli", "Compress using Brotli (slow!)")
     .option("--json", "Output in JSON format")
     .action(async (fileGlob: string, { sort, ignore, brotli, json }: Options) => {
-      const filePaths = globSync(fileGlob, {
+      const filePaths = globSync(fileGlob.replace(/\\/g, "/"), {
         onlyFiles: true,
         expandDirectories: false,
         ignore: ignore != null ? [ignore] : undefined,
@@ -57,21 +59,19 @@ void (async () => {
         ["----", "----", "----", "-----"],
         ...entries.map(({ filePath, original, compressed, difference }) => [
           filePath,
-          format(original),
-          format(compressed),
+          format(original)!,
+          format(compressed)!,
           `${((difference / original) * 100).toFixed(0)}%`,
         ]),
         ["-----", "------", "------", "----"],
         [
           "Total",
-          format(totals.original),
-          format(totals.compressed),
+          format(totals.original)!,
+          format(totals.compressed)!,
           `${((totals.difference / totals.original) * 100).toFixed(0)}%`,
         ],
       ])
     })
-    .showSuggestionAfterError()
-    .exitOverride()
 
-  await command.parseAsync(process.argv).catch(() => null)
+  program.parse(process.argv)
 })()
