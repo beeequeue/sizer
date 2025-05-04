@@ -6,7 +6,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.10.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "simple-git-hooks": {
     "pre-commit": "./node_modules/.bin/nano-staged"
@@ -41,8 +41,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.12.0",
-    "@changesets/changelog-github": "0.5.0",
-    "@changesets/cli": "2.27.10",
+    "@changesets/changelog-github": "1.0.0-next.0",
+    "@changesets/cli": "3.0.0-next.0",
     "@tsconfig/node22": "22.0.1",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.5",
