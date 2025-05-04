@@ -27,11 +27,7 @@ jobs:
         with:
           node-version: 22
 
-      - if: ${{ runner.os == 'Windows' }}
-        run: |
-          rm C:/npm/prefix/yarn; rm C:/npm/prefix/yarn.cmd
-
-      - run: npm i -g corepack
+      - run: corepack enable
 
       - name: find pnpm cache path
         id: cache
