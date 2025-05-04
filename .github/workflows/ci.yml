@@ -29,7 +29,8 @@ jobs:
 
       - if: ${{ runner.os == 'Windows' }}
         run: |
-          rm C:/npm/prefix/yarn C:/npm/prefix/npm
+          rm C:/npm/prefix/yarn
+          rm C:/npm/prefix/npm
 
       - run: npm i -g corepack
 
