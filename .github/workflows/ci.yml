@@ -39,7 +39,7 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ~/.pnpm-store
+          path: ${{ steps.cache.outputs.path }}
           key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
@@ -74,7 +74,7 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ~/.pnpm-store
+          path: ${{ steps.cache.outputs.path }}
           key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
@@ -102,7 +102,7 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ~/.pnpm-store
+          path: ${{ steps.cache.outputs.path }}
           key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
@@ -131,7 +131,7 @@ jobs:
 
       - uses: actions/cache@v4
         with:
-          path: ~/.pnpm-store
+          path: ${{ steps.cache.outputs.path }}
           key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
