@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: 22
 
+      - if: ${{ runner.os == 'Windows' }}
+        run: |
+          rm -f C:/npm/prefix/yarn C:/npm/prefix/npm
+
       - run: npm i -g corepack
 
       - name: find pnpm cache path
