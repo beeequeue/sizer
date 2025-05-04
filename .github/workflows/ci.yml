@@ -18,7 +18,7 @@ jobs:
           - runner: windows-2025
             name: dist-exec\sizer-x64-win.exe
 
-    runs-on: ${{ matrix.matrix.platform }}
+    runs-on: ${{ matrix.matrix.runner }}
 
     steps:
       - uses: actions/checkout@v4
