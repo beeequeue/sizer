@@ -32,7 +32,7 @@
     ]
   },
   "scripts": {
-    "build": "tsdown && pnpm exec pkg package.json",
+    "build": "tsdown",
     "dev": "tsdown --watch",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit --project tsconfig.json",
@@ -46,16 +46,19 @@
     "@tsconfig/node22": "22.0.1",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.5",
-    "@types/node": "20.17.9",
+    "@types/node": "22.15.3",
     "bytes": "3.1.2",
+    "empathic": "1.1.0",
     "eslint": "9.25.1",
     "nano-staged": "0.8.0",
-    "pkg": "5.8.1",
+    "postject": "1.0.0-alpha.6",
     "prettier": "3.5.3",
     "sade": "1.8.1",
     "simple-git-hooks": "2.13.0",
+    "tinyexec": "1.0.1",
     "tinyglobby": "0.2.13",
     "tsdown": "0.10.2",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "unplugin": "2.3.2"
   }
 }

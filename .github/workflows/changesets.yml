@@ -21,7 +21,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - run: corepack enable
 
@@ -48,6 +48,6 @@ jobs:
 
       - name: Upload binaries to release
         if: ${{ steps.changesets.outputs.published == 'true' }}
-        run: gh release upload --clobber $(git tag) dist-pkg/*
+        run: gh release upload --clobber $(git tag) dist-exec/*
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

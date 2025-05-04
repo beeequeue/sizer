@@ -8,6 +8,7 @@
     "tsBuildInfoFile": "node_modules/.cache/typescript/.tsbuildinfo",
 
     // Modules
+    "lib": ["es2024"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "resolveJsonModule": true,
