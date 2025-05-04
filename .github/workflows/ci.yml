@@ -141,10 +141,6 @@ jobs:
       - uses: actions/download-artifact@v4
         #if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
-          name: |
-            exec-Linux
-            exec-macOS
-            exec-Windows
           path: dist-exec/
 
       - name: Upload binaries to release
