@@ -10,9 +10,15 @@ jobs:
   build:
     strategy:
       matrix:
-        platform: [ubuntu-24.04, macos-15, windows-2025]
+        matrix:
+          - runner: ubuntu-24.04
+            name: sizer-x64-linux
+          - runner: macos-15
+            name: sizer-arm64-mac
+          - runner: windows-2025
+            name: dist-exec\sizer-x64-win.exe
 
-    runs-on: ${{ matrix.platform }}
+    runs-on: ${{ matrix.matrix.platform }}
 
     steps:
       - uses: actions/checkout@v4
@@ -48,7 +54,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: exec-${{ runner.os }}
+          name: ${{ matrix.matrix.name }}
           path: dist-exec/sizer-*
           if-no-files-found: error
           retention-days: 1
