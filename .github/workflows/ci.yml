@@ -21,7 +21,11 @@ jobs:
         with:
           node-version: 22
 
-      - run: corepack enable
+      - run: npm i -g corepack
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
         with:
@@ -59,7 +63,11 @@ jobs:
         with:
           node-version: 22
 
-      - run: corepack enable
+      - run: npm i -g corepack
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
         with:
@@ -83,7 +91,11 @@ jobs:
         with:
           node-version: 22
 
-      - run: corepack enable
+      - run: npm i -g corepack
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
         with:
@@ -109,6 +121,10 @@ jobs:
           node-version: 22
 
       - run: npm i -g corepack
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v4
         with:
@@ -139,7 +155,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
       - uses: actions/download-artifact@v4
-        #if: ${{ steps.changesets.outputs.published == 'true' }}
+        if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           path: dist-exec/
 
