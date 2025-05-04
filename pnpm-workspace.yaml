@@ -11,5 +11,5 @@ overrides:
   is-core-module: "npm:@nolyfill/is-core-module@^1"
   jsonc-eslint-parser: "-"
   lightningcss: "-"
-  unplugin-lightningcss: "-"
   toml-eslint-parser: "-"
+  unplugin-lightningcss: "-"

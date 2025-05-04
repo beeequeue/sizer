@@ -73,6 +73,13 @@ const seaPlugin = createUnplugin<Options | undefined>(
   ({ name, codeCache = true, v8Snapshot = false } = {}) => {
     let execName =
       name ?? (pkgJson.name.includes("/") ? pkgJson.name.split("/")[1] : pkgJson.name)
+
+    let platform = "unknown"
+    if (process.platform === "win32") platform = "win"
+    if (process.platform === "darwin") platform = "mac"
+    if (process.platform === "linux") platform = "linux"
+    execName += `-${process.arch}-${platform}`
+
     if (process.platform === "win32") {
       execName += ".exe"
     }
@@ -183,6 +190,10 @@ const seaPlugin = createUnplugin<Options | undefined>(
 
           fs.mkdirSync(distExecDir, { recursive: true })
           fs.renameSync(execPath, path.join(distExecDir, execName))
+          this.info(
+            `Executable created at \`${path.relative(process.cwd(), path.join(distExecDir, execName))}\``,
+          )
+
           cleanCacheDir()
         },
       },
