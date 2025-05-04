@@ -16,7 +16,7 @@ jobs:
           - runner: macos-15
             name: sizer-arm64-mac
           - runner: windows-2025
-            name: dist-exec\sizer-x64-win.exe
+            name: sizer-x64-win.exe
 
     runs-on: ${{ matrix.matrix.runner }}
 
