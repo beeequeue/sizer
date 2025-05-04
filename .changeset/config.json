@@ -3,7 +3,7 @@
   "access": "public",
   "baseBranch": "main",
   "changelog": [
-    "./changelog-formatter.cjs",
+    "@changesets/changelog-github",
     {
       "repo": "BeeeQueue/sizer"
     }
