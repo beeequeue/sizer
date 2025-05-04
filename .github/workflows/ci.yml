@@ -48,7 +48,6 @@ jobs:
           path: dist-exec/sizer-*
           if-no-files-found: error
           retention-days: 1
-          compression-level: 0
 
   lint:
     runs-on: ubuntu-latest
@@ -138,6 +137,12 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+
+      - uses: actions/download-artifact@v4
+        #if: ${{ steps.changesets.outputs.published == 'true' }}
+        with:
+          name: exec-*
+          path: dist-exec/
 
       - name: Upload binaries to release
         if: ${{ steps.changesets.outputs.published == 'true' }}
