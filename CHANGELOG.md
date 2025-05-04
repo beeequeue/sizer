@@ -1,5 +1,18 @@
 # @beequeue/sizer
 
+## 2.0.0
+
+### Major Changes
+
+- [`20f1102`](https://github.com/beeequeue/sizer/commit/20f11029556365d6fccd4077de17b016da6da424) Thanks [@beeequeue](https://github.com/beeequeue)! - Now requires node 20+
+
+### Minor Changes
+
+- [`20f1102`](https://github.com/beeequeue/sizer/commit/20f11029556365d6fccd4077de17b016da6da424) Thanks [@beeequeue](https://github.com/beeequeue)! - Replaced a bunch of packages for size and speed improvements
+
+  - `fast-glob` -> `tinyglobby`
+  - `commander` -> `sade`
+
 ## 1.0.0
 
 ### Major Changes
