@@ -49,6 +49,14 @@ jobs:
       - run: pnpm publint
 
       - uses: actions/upload-artifact@v4
+        if: ${{ runner.os == 'Linux' }}
+        with:
+          name: dist
+          path: dist
+          if-no-files-found: error
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.matrix.name }}
           path: dist-exec/sizer-*
@@ -134,6 +142,10 @@ jobs:
           key: v1-${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
 
       - name: Install dependencies
         run: pnpm i --development --frozen-lockfile

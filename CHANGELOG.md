@@ -1,5 +1,11 @@
 # @beequeue/sizer
 
+## 2.0.2
+
+### Patch Changes
+
+- Fix publishing again
+
 ## 2.0.1
 
 ### Patch Changes
