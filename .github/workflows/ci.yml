@@ -151,6 +151,8 @@ jobs:
       - name: Install dependencies
         run: pnpm i --development --frozen-lockfile
 
+      - run: pnpm publint
+
       - name: Update release PR / Publish packages to `npm`
         id: changesets
         uses: changesets/action@v1
