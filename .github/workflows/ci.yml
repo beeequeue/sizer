@@ -149,7 +149,7 @@ jobs:
         with:
           title: Release
           commit: Release new version
-          publish: pnpm release
+          publish: pnpm changeset publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

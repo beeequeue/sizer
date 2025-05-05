@@ -60,6 +60,9 @@ importers:
       prettier:
         specifier: 3.5.3
         version: 3.5.3
+      publint:
+        specifier: 0.3.12
+        version: 0.3.12
       sade:
         specifier: 1.8.1
         version: 1.8.1
@@ -74,7 +77,7 @@ importers:
         version: 0.2.13
       tsdown:
         specifier: 0.11.0-beta.3
-        version: 0.11.0-beta.3(typescript@5.8.3)
+        version: 0.11.0-beta.3(publint@0.3.12)(typescript@5.8.3)
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -510,6 +513,10 @@ packages:
     engines: {node: '>=14.0.0'}
     cpu: [x64]
     os: [win32]
+
+  '@publint/pack@0.1.2':
+    resolution: {integrity: sha512-S+9ANAvUmjutrshV4jZjaiG8XQyuJIZ8a4utWmN/vW1sgQ9IfBnPndwkmQYw53QmouOIytT874u65HEmu6H5jw==}
+    engines: {node: '>=18'}
 
   '@quansync/fs@0.1.2':
     resolution: {integrity: sha512-ezIadUb1aFhwJLd++WVqVpi9rnlX8vnd4ju7saPhwLHJN1mJgOv0puePTGV+FbtSnWtwoHDT8lAm4kagDZmpCg==}
@@ -1527,6 +1534,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  publint@0.3.12:
+    resolution: {integrity: sha512-1w3MMtL9iotBjm1mmXtG3Nk06wnq9UhGNRpQ2j6n1Zq7YAD6gnxMMZMIxlRPAydVjVbjSm+n0lhwqsD1m4LD5w==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
@@ -2281,6 +2293,8 @@ snapshots:
 
   '@oxc-transform/binding-win32-x64-msvc@0.67.0':
     optional: true
+
+  '@publint/pack@0.1.2': {}
 
   '@quansync/fs@0.1.2':
     dependencies:
@@ -3268,6 +3282,13 @@ snapshots:
 
   prettier@3.5.3: {}
 
+  publint@0.3.12:
+    dependencies:
+      '@publint/pack': 0.1.2
+      package-manager-detector: 1.3.0
+      picocolors: 1.1.1
+      sade: 1.8.1
+
   punycode@2.3.1: {}
 
   quansync@0.2.10: {}
@@ -3463,7 +3484,7 @@ snapshots:
     dependencies:
       typescript: 5.8.3
 
-  tsdown@0.11.0-beta.3(typescript@5.8.3):
+  tsdown@0.11.0-beta.3(publint@0.3.12)(typescript@5.8.3):
     dependencies:
       ansis: 3.17.0
       cac: 6.7.14
@@ -3478,6 +3499,8 @@ snapshots:
       tinyexec: 1.0.1
       tinyglobby: 0.2.13
       unconfig: 7.3.2
+    optionalDependencies:
+      publint: 0.3.12
     transitivePeerDependencies:
       - '@oxc-project/runtime'
       - supports-color

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { format } from "bytes"
 import Sade from "sade"
 import { globSync } from "tinyglobby"
