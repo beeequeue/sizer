@@ -46,6 +46,8 @@ jobs:
 
       - run: pnpm build
 
+      - run: pnpm publint
+
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.matrix.name }}
