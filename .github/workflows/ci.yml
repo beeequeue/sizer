@@ -52,7 +52,7 @@ jobs:
         if: ${{ runner.os == 'Linux' }}
         with:
           name: dist
-          path: dist
+          path: dist/**/*
           if-no-files-found: error
           retention-days: 1
 
@@ -146,6 +146,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist/
 
       - name: Install dependencies
         run: pnpm i --development --frozen-lockfile
@@ -165,17 +166,17 @@ jobs:
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-arm64-mac
-          path: dist-exec/sizer-arm64-mac
+          path: dist-exec/
       - uses: actions/download-artifact@v4
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-linux
-          path: dist-exec/sizer-x64-linux
+          path: dist-exec/
       - uses: actions/download-artifact@v4
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-win.exe
-          path: dist-exec/sizer-x64-win.exe
+          path: dist-exec/
 
       - name: Upload binaries to release
         if: ${{ steps.changesets.outputs.published == 'true' }}
