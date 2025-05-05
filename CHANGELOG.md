@@ -1,5 +1,11 @@
 # @beequeue/sizer
 
+## 2.1.0
+
+### Minor Changes
+
+- [`9c1d656`](https://github.com/beeequeue/sizer/commit/9c1d656c930a34034b49b6aa6f67f4a6b6a337a7) Thanks [@beeequeue](https://github.com/beeequeue)! - Added `zstd` compression as well via `-Z` or `--zstd` flags
+
 ## 2.0.3
 
 ### Patch Changes
