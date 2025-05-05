@@ -1,10 +1,11 @@
 import { promises as fs } from "node:fs"
 import { promisify } from "node:util"
-import { brotliCompress, gzip as gzipCompress } from "node:zlib"
+import zlib from "node:zlib"
 
 const compress = {
-  gzip: promisify(gzipCompress),
-  brotli: promisify(brotliCompress),
+  gzip: promisify(zlib.gzip),
+  brotli: promisify(zlib.brotliCompress),
+  zstd: promisify(zlib.zstdCompress),
 }
 
 export type Result = {
@@ -14,13 +15,29 @@ export type Result = {
   difference: number
 }
 
-export const getCompressedFileSizes = async (filePaths: string[], brotli?: boolean) => {
+export const getCompressedFileSizes = async (
+  filePaths: string[],
+  compression: keyof typeof compress,
+) => {
   return Promise.all(
     filePaths.map(async (filePath) => {
       const contents = await fs.readFile(filePath)
-      const compressed = await (brotli
-        ? compress.brotli(contents)
-        : compress.gzip(contents, { level: 9 }))
+
+      let options: zlib.ZlibOptions | zlib.BrotliOptions | zlib.ZstdOptions | undefined
+      switch (compression) {
+        case "gzip":
+          options = { level: 9 } satisfies zlib.ZlibOptions
+          break
+        case "zstd":
+          options = {
+            params: { [zlib.constants.ZSTD_c_compressionLevel]: 19 },
+          } satisfies zlib.ZstdOptions
+          break
+        case "brotli":
+          break
+      }
+
+      const compressed = await compress[compression](contents, options)
 
       return {
         filePath,

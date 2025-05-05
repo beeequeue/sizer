@@ -11,6 +11,7 @@ export type Options = {
   sort: "name-asc" | "name-desc" | "size-asc" | "size-desc"
   ignore?: string
   brotli?: boolean
+  zstd?: boolean
   json?: boolean
 }
 
@@ -27,16 +28,21 @@ void (async () => {
       "size-desc",
     )
     .option("-i, --ignore", "Glob of files to exclude from output")
+    .option("-G, --gzip", "Compress using gzip (lvl 9) (default)")
     .option("-B, --brotli", "Compress using Brotli (slow!)")
+    .option("-Z, --zstd", "Compress using Zstandard (lvl 19)")
     .option("--json", "Output in JSON format")
-    .action(async (fileGlob: string, { sort, ignore, brotli, json }: Options) => {
+    .action(async (fileGlob: string, { sort, ignore, brotli, zstd, json }: Options) => {
       const filePaths = globSync(fileGlob.replace(/\\/g, "/"), {
         onlyFiles: true,
         expandDirectories: false,
         ignore: ignore != null ? [ignore] : undefined,
       })
 
-      let entries = await getCompressedFileSizes(filePaths, brotli)
+      let entries = await getCompressedFileSizes(
+        filePaths,
+        zstd ? "zstd" : brotli ? "brotli" : "gzip",
+      )
 
       entries = entries.sort(sortingFunctions[sort])
 
@@ -57,7 +63,7 @@ void (async () => {
       )
 
       printRows([
-        ["Path", "Size", brotli ? "Brotli" : "Gzip", "Diff%"],
+        ["Path", "Size", zstd ? "zstd" : brotli ? "brotli" : "gzip", "Diff%"],
         ["----", "----", "----", "-----"],
         ...entries.map(({ filePath, original, compressed, difference }) => [
           filePath,
