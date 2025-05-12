@@ -49,6 +49,7 @@
     "simple-git-hooks": "2.13.0",
     "tinyexec": "1.0.1",
     "tinyglobby": "0.2.13",
+    "tinywhich": "0.0.3",
     "tsdown": "0.11.0-beta.3",
     "typescript": "5.8.3",
     "unplugin": "2.3.2"

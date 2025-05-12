@@ -5,6 +5,7 @@ import path from "node:path"
 import { cache } from "empathic/package"
 import { inject } from "postject"
 import { x } from "tinyexec"
+import { which } from "tinywhich"
 import { defineConfig } from "tsdown"
 import { createUnplugin } from "unplugin"
 
@@ -20,38 +21,6 @@ const blobPath = path.join(cacheDir, "sea.blob")
 const cleanCacheDir = () => {
   fs.rmSync(cacheDir, { recursive: true, force: true })
   fs.mkdirSync(cacheDir, { recursive: true })
-}
-
-const executableExists = (filePath: string) => {
-  if (
-    // If on windows
-    process.platform === "win32" &&
-    // and the file we're looking for isn't specifying .exe extension
-    !path.basename(filePath).includes(".") &&
-    // also check if the file exists with .exe
-    fs.existsSync(`${filePath}.exe`)
-  ) {
-    return true
-  }
-
-  return fs.existsSync(filePath)
-}
-
-const findInPath = (name: string): string | null => {
-  const pathString =
-    process.platform === "win32"
-      ? (process.env.Path ?? process.env.PATH)
-      : process.env.PATH
-  const pathDirs = pathString?.split(path.delimiter) ?? []
-
-  for (const dir of pathDirs) {
-    const fullPath = path.join(dir, name)
-    if (!executableExists(fullPath)) continue
-
-    return fullPath
-  }
-
-  return null
 }
 
 type SeaConfig = {
@@ -100,7 +69,7 @@ const seaPlugin = createUnplugin<Options | undefined>(
         await fsp.copyFile(process.execPath, execPath)
 
         // Remove exec signing
-        if (process.platform === "win32" && findInPath("signtool") != null) {
+        if (process.platform === "win32" && which("signtool") != null) {
           await x("signtool", ["remove", "/s", execName], {
             nodeOptions: { cwd: path.resolve(cacheDir) },
           })

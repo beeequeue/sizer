@@ -75,6 +75,9 @@ importers:
       tinyglobby:
         specifier: 0.2.13
         version: 0.2.13
+      tinywhich:
+        specifier: 0.0.3
+        version: 0.0.3
       tsdown:
         specifier: 0.11.0-beta.3
         version: 0.11.0-beta.3(publint@0.3.12)(typescript@5.8.3)
@@ -1719,6 +1722,10 @@ packages:
   tinyglobby@0.2.13:
     resolution: {integrity: sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==}
     engines: {node: '>=12.0.0'}
+
+  tinywhich@0.0.3:
+    resolution: {integrity: sha512-3vu+B34RYu3WOOZsmq9sk+bVH+y0Q7U7VJ+Lw16hNzNC4bvwXS6FM/Ak2MskvZq/GamLNqY8j4HI391oMP8WRA==}
+    engines: {node: '>=16'}
 
   tmp@0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
@@ -3471,6 +3478,8 @@ snapshots:
     dependencies:
       fdir: 6.4.4(picomatch@4.0.2)
       picomatch: 4.0.2
+
+  tinywhich@0.0.3: {}
 
   tmp@0.0.33:
     dependencies:
