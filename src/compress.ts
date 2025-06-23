@@ -37,7 +37,7 @@ export const getCompressedFileSizes = async (
           break
       }
 
-      const compressed = await compress[compression](contents, options)
+      const compressed = await compress[compression](contents, options as never)
 
       return {
         filePath,

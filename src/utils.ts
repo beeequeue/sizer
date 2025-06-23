@@ -5,7 +5,7 @@ export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
   const maxColWidths = rows.reduce((accum, row) => {
     for (const [i, column] of row.entries()) {
       const width = column.length
-      if (accum[i] >= width) continue
+      if (accum[i]! >= width) continue
 
       accum[i] = width
     }
@@ -17,7 +17,7 @@ export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
     .reduce(
       (accum, row) =>
         `${accum}\n${row
-          .map((column, i) => column.padEnd(maxColWidths[i] + 2, " "))
+          .map((column, i) => column.padEnd(maxColWidths[i]! + 2, " "))
           .join("")}`,
       "",
     )

@@ -59,7 +59,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.matrix.name }}
-          path: dist-exec/sizer-*
+          path: build/sizer-*
           if-no-files-found: error
           retention-days: 1
 
@@ -168,20 +168,20 @@ jobs:
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-arm64-mac
-          path: dist-exec/
+          path: build/
       - uses: actions/download-artifact@v4
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-linux
-          path: dist-exec/
+          path: build/
       - uses: actions/download-artifact@v4
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-win.exe
-          path: dist-exec/
+          path: build/
 
       - name: Upload binaries to release
         if: ${{ steps.changesets.outputs.published == 'true' }}
-        run: gh release upload --clobber $(git tag) dist-exec/*
+        run: gh release upload --clobber $(git tag) build/*
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

@@ -1,5 +1,5 @@
-savePrefix: ""
-shellEmulator: true
+allowBuilds:
+  simple-git-hooks: false
 
 overrides:
   "@eslint/markdown": "-"
@@ -8,8 +8,11 @@ overrides:
   eslint-plugin-toml: "-"
   eslint-plugin-vue: "-"
   eslint-processor-vue-blocks: "-"
-  is-core-module: "npm:@nolyfill/is-core-module@^1"
+  is-core-module: npm:@nolyfill/is-core-module@^1
   jsonc-eslint-parser: "-"
   lightningcss: "-"
   toml-eslint-parser: "-"
   unplugin-lightningcss: "-"
+
+savePrefix: ""
+shellEmulator: true

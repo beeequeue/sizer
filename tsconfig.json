@@ -1,34 +1,25 @@
 {
-  "extends": ["@tsconfig/node22/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
+  "extends": ["@tsconfig/node24/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
   "compilerOptions": {
     // Output
     "noEmit": true,
-    "sourceMap": true,
-    "composite": true,
-    "tsBuildInfoFile": "node_modules/.cache/typescript/.tsbuildinfo",
 
-    // Modules
-    "lib": ["es2024"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    // Modules & resolution
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "baseUrl": "./src",
+    "allowImportingTsExtensions": true,
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["./src/*"]
     },
 
     // Lessen strictness
-    "importsNotUsedAsValues": "remove",
     "noImplicitReturns": false,
     "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
     "exactOptionalPropertyTypes": false,
-    "verbatimModuleSyntax": false,
 
     // Extra types
     "types": ["node"]
   },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["./"]
 }
