@@ -4,7 +4,7 @@
   "version": "2.1.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
-  "packageManager": "pnpm@10.11.0",
+  "packageManager": "pnpm@10.12.4",
   "engines": {
     "node": ">=20"
   },
@@ -37,20 +37,20 @@
     "@tsconfig/node22": "22.0.2",
     "@tsconfig/strictest": "2.0.5",
     "@types/bytes": "3.1.5",
-    "@types/node": "22.15.29",
+    "@types/node": "22.15.34",
     "bytes": "3.1.2",
     "empathic": "1.1.0",
     "eslint": "9.28.0",
     "nano-staged": "0.8.0",
     "postject": "1.0.0-alpha.6",
-    "prettier": "3.5.3",
+    "prettier": "3.6.2",
     "publint": "0.3.12",
     "sade": "1.8.1",
     "simple-git-hooks": "2.13.0",
     "tinyexec": "1.0.1",
     "tinyglobby": "0.2.14",
     "tinywhich": "0.1.2",
-    "tsdown": "0.12.5",
+    "tsdown": "0.12.9",
     "typescript": "5.8.3",
     "unplugin": "2.3.5"
   }
