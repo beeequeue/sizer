@@ -46,8 +46,8 @@ importers:
         specifier: 3.1.2
         version: 3.1.2
       empathic:
-        specifier: 1.1.0
-        version: 1.1.0
+        specifier: 2.0.0
+        version: 2.0.0
       eslint:
         specifier: 9.30.0
         version: 9.30.0(jiti@2.4.2)
@@ -777,10 +777,6 @@ packages:
 
   electron-to-chromium@1.5.149:
     resolution: {integrity: sha512-UyiO82eb9dVOx8YO3ajDf9jz2kKyt98DEITRdeLPstOEuTlLzDA4Gyq5K9he71TQziU5jUVu2OAu5N48HmQiyQ==}
-
-  empathic@1.1.0:
-    resolution: {integrity: sha512-rsPft6CK3eHtrlp9Y5ALBb+hfK+DWnA4WFebbazxjWyx8vSm3rZeoM3z9irsjcqO3PYRzlfv27XIB4tz2DV7RA==}
-    engines: {node: '>=14'}
 
   empathic@2.0.0:
     resolution: {integrity: sha512-i6UzDscO/XfAcNYD75CfICkmfLedpyPDdozrLMmQc5ORaQcdMoc21OnlEylMIqI7U8eniKrPMxxtj8k0vhmJhA==}
@@ -2335,8 +2331,6 @@ snapshots:
   dts-resolver@2.1.1: {}
 
   electron-to-chromium@1.5.149: {}
-
-  empathic@1.1.0: {}
 
   empathic@2.0.0: {}
 
