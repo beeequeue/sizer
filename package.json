@@ -31,7 +31,7 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "5.0.0",
+    "@antfu/eslint-config": "5.4.1",
     "@changesets/changelog-github": "1.0.0-next.0",
     "@changesets/cli": "3.0.0-next.0",
     "@tsconfig/node22": "22.0.2",
@@ -40,11 +40,11 @@
     "@types/node": "22.18.8",
     "bytes": "3.1.2",
     "empathic": "2.0.0",
-    "eslint": "9.32.0",
+    "eslint": "9.36.0",
     "nano-staged": "0.8.0",
     "postject": "1.0.0-alpha.6",
     "prettier": "3.6.2",
-    "publint": "0.3.12",
+    "publint": "0.3.13",
     "sade": "1.8.1",
     "simple-git-hooks": "2.13.1",
     "tinyexec": "1.0.1",
