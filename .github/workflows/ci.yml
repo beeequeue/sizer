@@ -25,7 +25,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.20.0
 
       - run: corepack enable
 
@@ -71,7 +71,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.20.0
 
       - run: npm i -g corepack
 
@@ -99,7 +99,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.20.0
 
       - run: npm i -g corepack
 
@@ -128,7 +128,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.20.0
 
       - run: npm i -g corepack
 
