@@ -143,7 +143,7 @@ jobs:
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           name: dist
           path: dist/
@@ -164,17 +164,17 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-arm64-mac
           path: dist-exec/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-linux
           path: dist-exec/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-win.exe
