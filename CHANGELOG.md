@@ -1,5 +1,15 @@
 # @beequeue/sizer
 
+## 3.0.0
+
+### Major Changes
+
+- [`8fc7953`](https://github.com/beeequeue/sizer/commit/8fc795375bc2deafc66bc63d307447d7e35cee26) Thanks [@beeequeue](https://github.com/beeequeue)! - Upped minimum Node version to 25+.
+
+### Patch Changes
+
+- [`13d2eb4`](https://github.com/beeequeue/sizer/commit/13d2eb4f3c034714c3955bb4345c523af58428bd) Thanks [@beeequeue](https://github.com/beeequeue)! - Removed `CHANGELOG.md` from published files
+
 ## 2.1.0
 
 ### Minor Changes
