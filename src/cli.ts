@@ -7,6 +7,8 @@ import { globSync } from "tinyglobby"
 import { getCompressedFileSizes } from "./compress.js"
 import { printRows, sortingFunctions } from "./utils.js"
 
+const backslashRegex = /\\/g
+
 export type Options = {
   sort: "name-asc" | "name-desc" | "size-asc" | "size-desc"
   ignore?: string
@@ -33,7 +35,7 @@ void (async () => {
     .option("-Z, --zstd", "Compress using Zstandard (lvl 19)")
     .option("--json", "Output in JSON format")
     .action(async (fileGlob: string, { sort, ignore, brotli, zstd, json }: Options) => {
-      const filePaths = globSync(fileGlob.replace(/\\/g, "/"), {
+      const filePaths = globSync(fileGlob.replace(backslashRegex, "/"), {
         onlyFiles: true,
         expandDirectories: false,
         ignore: ignore != null ? [ignore] : undefined,

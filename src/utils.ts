@@ -1,6 +1,8 @@
 import type { Options } from "./cli.js"
 import type { Result } from "./compress.js"
 
+const newlineRegex = /^\n|\n$/g
+
 export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
   const maxColWidths = rows.reduce((accum, row) => {
     for (const [i, column] of row.entries()) {
@@ -21,7 +23,7 @@ export const printRows = <Tuple extends readonly string[]>(rows: Tuple[]) => {
           .join("")}`,
       "",
     )
-    .replaceAll(/^\n|\n$/g, "")
+    .replaceAll(newlineRegex, "")
 
   console.log(output)
 }

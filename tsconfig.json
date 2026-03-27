@@ -19,7 +19,8 @@
     "exactOptionalPropertyTypes": false,
 
     // Extra types
-    "types": ["node"]
+    "types": ["node"],
+    "lib": ["es2024", "ESNext.Array", "ESNext.Collection"]
   },
   "include": ["./"]
 }
