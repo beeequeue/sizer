@@ -20,7 +20,7 @@
     "dist"
   ],
   "bin": {
-    "sizer": "dist/cli.cjs"
+    "sizer": "dist/cli.mjs"
   },
   "scripts": {
     "build": "tsdown",

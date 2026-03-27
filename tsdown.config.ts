@@ -9,6 +9,7 @@ export default defineConfig({
     enabled: true,
     seaConfig: { disableExperimentalSEAWarning: true, execArgvExtension: "cli" },
   },
+  publint: true,
 
   define: {
     PKG_VERSION: JSON.stringify(pkgJson.version),
