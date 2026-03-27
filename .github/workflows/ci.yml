@@ -48,7 +48,7 @@ jobs:
 
       - run: pnpm publint
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         if: ${{ runner.os == 'Linux' }}
         with:
           name: dist
@@ -56,7 +56,7 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         with:
           name: ${{ matrix.matrix.name }}
           path: build/sizer-*
@@ -143,7 +143,7 @@ jobs:
           restore-keys: |
             v1-${{ runner.os }}-pnpm-
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: dist
           path: dist/
@@ -164,17 +164,17 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-arm64-mac
           path: build/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-linux
           path: build/
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         if: ${{ steps.changesets.outputs.published == 'true' }}
         with:
           name: sizer-x64-win.exe
